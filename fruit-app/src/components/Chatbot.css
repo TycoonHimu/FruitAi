@@ -31,8 +31,8 @@
 
 /* Individual fruit card */
 .fruit-card {
-    background: #28afe5;
-    /* Soft blue background */
+    background: #007BFF;
+    /* Consistent button color */
     border-radius: 10px;
     /* Rounded corners for fruit cards */
     padding: 20px;
@@ -41,6 +41,12 @@
     /* Pointer cursor for interactive elements */
     transition: transform 0.2s ease;
     /* Smooth transform effect on hover */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+    /* White text color */
 }
 
 .fruit-card:hover {
@@ -78,23 +84,33 @@
     /* Padding inside chat history */
     margin-bottom: 20px;
     /* Space below chat history */
-    background: #f9f9f9;
+    background: #f1f1f2;
     /* Light background for chat history */
 }
 
 /* Individual chat messages */
-.chat-user {
-    text-align: right;
-    /* Align user messages to the right */
+.chat-user,
+.chat-bot {
+    padding: 8px;
+    /* Padding for messages */
+    border-radius: 5px;
+    /* Rounded corners for messages */
     margin-bottom: 10px;
     /* Space between messages */
 }
 
+.chat-user {
+    background-color: #d1e7ff;
+    /* Light blue background for user messages */
+    align-self: flex-end;
+    /* Align user messages to the right */
+}
+
 .chat-bot {
-    text-align: left;
+    background-color: #e2e3e5;
+    /* Light gray background for bot messages */
+    align-self: flex-start;
     /* Align bot messages to the left */
-    margin-bottom: 10px;
-    /* Space between messages */
 }
 
 /* Chat input container */
@@ -137,7 +153,7 @@
 /* Send button */
 .chat-input-container button {
     background: #007BFF;
-    /* Button background color */
+    /* Consistent button background color */
     color: white;
     /* Button text color */
     border: none;
@@ -159,37 +175,72 @@
     /* Darker blue on hover */
 }
 
-/* Heading styling */
-.chatbot-container h2 {
-    margin-bottom: 20px;
-    /* Space below the heading */
-    font-size: 24px;
-    /* Font size for heading */
-    color: #2b6ce4;
-    /* Soft blue color */
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .chatbot-container {
+        padding: 15px;
+        /* Reduced padding for smaller screens */
+    }
+
+    .fruits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Adjust grid layout for smaller screens */
+    }
+
+    .fruit-card {
+        padding: 15px;
+        /* Reduced padding for fruit cards */
+        max-width: 150px;
+        /* Limit card width */
+    }
+
+    .chat-history {
+        max-height: 200px;
+        /* Reduced height for smaller screens */
+    }
+
+    .chat-input-container {
+        flex-direction: column;
+        /* Stack input and button vertically */
+        align-items: stretch;
+        /* Stretch items to full width */
+    }
+
+    .chat-input-container input {
+        margin-right: 0;
+        /* Remove margin for vertical layout */
+        margin-bottom: 10px;
+        /* Space between input and button */
+    }
+
+    .chat-input-container button {
+        width: 100%;
+        /* Full width button */
+        padding: 12px;
+        /* Increased padding for better touch target */
+    }
 }
 
-/* Chat message styles */
-.chat-user,
-.chat-bot {
-    padding: 8px;
-    /* Padding for messages */
-    border-radius: 5px;
-    /* Rounded corners for messages */
-    margin-bottom: 10px;
-    /* Space between messages */
-}
+@media (max-width: 480px) {
+    .chatbot-container {
+        padding: 10px;
+        /* Further reduced padding for smaller screens */
+    }
 
-.chat-user {
-    background-color: #d1e7ff;
-    /* Light blue background for user messages */
-    align-self: flex-end;
-    /* Align user messages to the right */
-}
+    .chat-history {
+        max-height: 150px;
+        /* Further reduced height for very small screens */
+    }
 
-.chat-bot {
-    background-color: #e2e3e5;
-    /* Light gray background for bot messages */
-    align-self: flex-start;
-    /* Align bot messages to the left */
+    .chat-input-container input {
+        font-size: 14px;
+        /* Smaller font size for input */
+    }
+
+    .chat-input-container button {
+        font-size: 14px;
+        /* Smaller font size for button */
+        padding: 10px;
+        /* Adjust padding for smaller screens */
+    }
 }
