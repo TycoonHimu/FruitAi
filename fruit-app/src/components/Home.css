@@ -1,68 +1,55 @@
-/* Home.css */
-
 /* Container for the home page */
 .home-container {
-    background: rgba(255, 255, 255, 0.9);
-    /* Semi-transparent white for better contrast */
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 15px;
     border-radius: 15px;
-    /* Increased radius for a softer look */
     max-width: 900px;
     margin: auto;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    /* Enhanced shadow for depth */
     text-align: center;
     backdrop-filter: blur(10px);
-    /* Blur effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80vh;
 }
 
 /* Heading styling */
 .home-container h2 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-size: 24px;
     color: #2b6ce4;
-    /* Soft blue color */
     font-family: 'Arial', sans-serif;
     text-transform: uppercase;
-    /* Boldens the heading */
 }
 
 /* Grid layout for services */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    /* Adjusted min width for smaller cards */
     gap: 15px;
-    /* Increased gap for better spacing */
 }
 
 /* Individual service card styling */
 .service-card {
-    background: #28afe5;
-    /* Soft blue background */
-    border-radius: 10px;
-    /* Increased radius for a more modern look */
+    background: #2d76f3;
+    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Smooth transitions */
     position: relative;
-    /* To enable absolute positioning of content */
-    padding-top: 80%;
-    /* Adjusted to create slightly smaller square shape */
     width: 100%;
-    /* Full width of its container */
+    max-width: 200px;
+    margin: auto;
     display: flex;
-    /* Flexbox for centering content */
     align-items: center;
-    /* Center content vertically */
     justify-content: center;
-    /* Center content horizontally */
     text-align: center;
-    /* Center text */
     overflow: hidden;
-    /* Prevents overflow of content */
+    padding: 0;
+    /* Remove padding for consistent sizing */
+    aspect-ratio: 1;
+    /* Maintain a square aspect ratio */
 }
 
 /* Service card content */
@@ -74,67 +61,74 @@
     bottom: 0;
     padding: 10px;
     display: flex;
-    /* Use flexbox for centering */
     flex-direction: column;
-    /* Stack items vertically */
     align-items: center;
-    /* Center items horizontally */
     justify-content: center;
-    /* Center items vertically */
     transition: transform 0.3s ease;
-    /* Smooth transition for scaling */
 }
 
+/* Service icon */
 .service-icon {
-    font-size: 2.5em;
-    /* Reduced icon size for smaller cards */
-    margin-bottom: 10px;
+    font-size: 5vw;
+    /* Responsive icon size */
     color: #FFFFFF;
-    /* White color for icons */
+    margin-bottom: 10px;
+    max-width: 60%;
+    /* Ensure icon fits within the card */
+    height: auto;
 }
 
 /* Service card text */
 .service-card p {
     margin: 0;
-    font-size: 0.9em;
-    /* Smaller text size for better fit */
+    font-size: 1.5vw;
+    /* Responsive text size */
     color: #FFFFFF;
-    /* White text color */
 }
 
 /* Hover effect for service card */
 .service-card:hover {
     transform: translateY(-5px) scale(1.02);
-    /* Slight scaling effect on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.fruit-heading {
+    text-align: center;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 24px;
+    width: fit-content;
+    /* Makes the box size adjust to the text */
+    margin: 0 auto;
+    /* Centers the element horizontally */
 }
 
 /* Logout button styling */
 .logout-button {
     background: #007BFF;
-    /* Changed to a more vibrant blue */
     color: white;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 20px;
+    margin-top: 15px;
     transition: background 0.3s ease, transform 0.2s ease;
-    /* Added transition for scaling */
 }
 
 .logout-button:hover {
     background: #0056b3;
-    /* Darker blue on hover */
     transform: scale(1.05);
-    /* Slight scaling effect */
 }
 
 /* Responsive design */
 @media (max-width: 1024px) {
     .home-container {
         padding: 15px;
+        margin-top: 50px;
+        min-height: 80vh;
     }
 
     .home-container h2 {
@@ -142,7 +136,7 @@
     }
 
     .logout-button {
-        padding: 8px 16px;
+        padding: 8px 18px;
         font-size: 14px;
     }
 }
@@ -150,15 +144,29 @@
 @media (max-width: 768px) {
     .home-container {
         padding: 10px;
+        margin-top: 40px;
+        min-height: 70vh;
     }
 
     .home-container h2 {
         font-size: 20px;
+        margin-bottom: 15px;
     }
 
     .services-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        /* Adjust grid columns */
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-card {
+        max-width: 120px;
+    }
+
+    .service-icon {
+        font-size: 8vw;
+    }
+
+    .service-card p {
+        font-size: 1.2vw;
     }
 
     .logout-button {
@@ -170,15 +178,31 @@
 @media (max-width: 480px) {
     .home-container {
         padding: 5px;
+        min-height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .home-container h2 {
         font-size: 18px;
+        margin-bottom: 15px;
     }
 
     .services-grid {
-        grid-template-columns: 1fr;
-        /* Single column layout */
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-card {
+        max-width: 100px;
+    }
+
+    .service-icon {
+        font-size: 2.5vw;
+    }
+
+    .service-card p {
+        font-size: 1vw;
     }
 
     .logout-button {
