@@ -1,49 +1,89 @@
-/* frontend/src/components/Translator.css */
+/* Container for the Translator page */
 .translator-container {
+    background: rgba(255, 255, 255, 0.9);
+    /* Semi-transparent white background */
     padding: 20px;
+    border-radius: 15px;
+    /* Rounded corners */
+    max-width: 800px;
+    /* Limit width for better readability */
+    margin: auto;
+    /* Center the container */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    /* Shadow for depth */
     text-align: center;
 }
 
+/* Form styling */
 .translator-container form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Textarea styling */
 .translator-container textarea {
     width: 80%;
     max-width: 500px;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 10px;
     resize: vertical;
+    border-radius: 5px;
+    /* Rounded corners for textarea */
+    border: 1px solid #ccc;
+    /* Light border for better visibility */
 }
 
+/* Error message styling */
 .translator-container .error {
     color: red;
+    margin-top: 5px;
 }
 
+/* Button styling */
 .translator-container button {
     padding: 10px 20px;
-    background-color: #ffc107;
+    background-color: #007BFF;
+    /* Consistent button color */
     border: none;
     border-radius: 5px;
+    color: white;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+/* Disabled button styling */
 .translator-container button:disabled {
-    background-color: #e0a800;
+    background-color: #0056b3;
+    /* Darker shade for disabled state */
     cursor: not-allowed;
 }
 
+/* Hover effect for button */
+.translator-container button:hover:not(:disabled) {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Translated result styling */
 .translated-result {
     margin-top: 20px;
+    padding: 10px;
+    background-color: #f1f1f2;
+    /* Light background for results */
+    border-radius: 5px;
+    /* Rounded corners */
+    border: 1px solid #ccc;
+    /* Light border */
 }
 
 /* Mobile Responsive for Translator */
 @media (max-width: 600px) {
     .translator-container {
         width: 100%;
-        padding: 20px;
+        padding: 15px;
+        /* Reduced padding for smaller screens */
     }
 
     .translator-container textarea {
@@ -52,14 +92,13 @@
         padding: 12px;
     }
 
-    .translate-button {
+    .translator-container button {
         width: 100%;
         padding: 12px;
         font-size: 16px;
     }
 
     .translated-result {
-        padding: 10px;
         font-size: 18px;
     }
 }
