@@ -1,68 +1,105 @@
-/* About.css */
-
 /* Apply Flexbox to the body */
 body {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    min-height: 100vh; /* Ensure the body takes up the full height of the viewport */
-    margin: 0; /* Remove default margin */
+    flex-direction: column;
+    /* Stack children vertically */
+    min-height: 100vh;
+    /* Ensure the body takes up the full height of the viewport */
+    margin: 0;
+    /* Remove default margin */
 }
 
 /* Container for the About page */
 .about-container {
-    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white for better contrast */
-    padding: 40px; /* Ample padding for content */
-    border-radius: 15px; /* Soft rounded corners */
-    max-width: 800px; /* Limit width for better readability */
-    margin: auto; /* Center the container */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    text-align: center; /* Center text alignment */
-    backdrop-filter: blur(10px); /* Optional blur effect for background */
-    margin-top: auto; /* Pushes the container to the bottom */
+    background: rgba(255, 255, 255, 0.9);
+    /* Semi-transparent white for better contrast */
+    padding: 40px;
+    /* Ample padding for content */
+    border-radius: 15px;
+    /* Soft rounded corners */
+    max-width: 800px;
+    /* Limit width for better readability */
+    margin: auto;
+    /* Center the container */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    /* Shadow for depth */
+    text-align: center;
+    /* Center text alignment */
+    backdrop-filter: blur(10px);
+    /* Optional blur effect for background */
+    margin-top: auto;
+    /* Pushes the container to the bottom */
 }
 
 /* Heading styling */
 .about-container h2 {
-    margin-bottom: 20px; /* Space below the heading */
-    font-size: 28px; /* Larger font size for headings */
-    color: #2b6ce4; /* Soft blue color */
-    font-family: 'Arial', sans-serif; /* Consistent font family */
-    text-transform: uppercase; /* Uppercase text for emphasis */
+    margin-bottom: 20px;
+    /* Space below the heading */
+    font-size: 28px;
+    /* Larger font size for headings */
+    color: #2b6ce4;
+    /* Soft blue color */
+    font-family: 'Arial', sans-serif;
+    /* Consistent font family */
+    text-transform: uppercase;
+    /* Uppercase text for emphasis */
+    background-color: #2b6ce4;
+    /* Blue background box */
+    color: white;
+    /* White text color */
+    padding: 10px;
+    /* Padding inside the heading box */
+    border-radius: 5px;
+    /* Rounded corners for the box */
 }
 
 /* Paragraph styling */
 .about-container p {
-    margin: 10px 0; /* Add space between paragraphs */
-    font-size: 16px; /* Standard font size */
-    line-height: 1.5; /* Improved readability with line height */
-    color: #555; /* Dark gray color for text */
+    margin: 10px 0;
+    /* Add space between paragraphs */
+    font-size: 16px;
+    /* Standard font size */
+    line-height: 1.5;
+    /* Improved readability with line height */
+    color: #555;
+    /* Dark gray color for text */
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
     .about-container {
-        padding: 20px; /* Reduced padding for smaller screens */
+        padding: 20px;
+        /* Reduced padding for smaller screens */
+        margin-top: 150px;
+        /* Push the container down */
     }
 
     .about-container h2 {
-        font-size: 24px; /* Slightly smaller heading */
+        font-size: 24px;
+        /* Slightly smaller heading */
     }
 
     .about-container p {
-        font-size: 14px; /* Smaller paragraph text */
+        font-size: 14px;
+        /* Smaller paragraph text */
     }
 }
 
 @media (max-width: 480px) {
     .about-container {
-        padding: 15px; /* Further reduced padding */
+        padding: 15px;
+        /* Further reduced padding */
+        margin-top: 250px;
+        /* Push the container down further */
     }
 
     .about-container h2 {
-        font-size: 22px; /* Even smaller heading */
+        font-size: 22px;
+        /* Even smaller heading */
     }
 
     .about-container p {
-        font-size: 12px; /* Smaller text for smaller devices */
+        font-size: 12px;
+        /* Smaller text for smaller devices */
     }
 }
