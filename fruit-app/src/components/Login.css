@@ -3,44 +3,61 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    /* Make sure the body takes the full height of the viewport */
     background-image: url('./Images/background.jpg');
-    /* Path to your image */
     background-size: cover;
-    /* Cover the entire background */
     background-position: center;
-    /* Center the image */
     background-repeat: no-repeat;
-    /* Prevent the image from repeating */
     background-attachment: fixed;
 }
 
-/* General Container */
-.login-container {
+/* Container for both login and signup forms */
+.login-signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Container for the forms */
+.form-container {
     width: 350px;
-    margin: 100px auto;
-    padding: 40px;
+    padding: 20px;
     background: rgba(255, 255, 255, 0.9);
-    /* Semi-transparent white for better contrast */
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
     transition: transform 0.3s ease;
 }
 
-.login-container:hover {
-    transform: translateY(-5px);
-}
-
-/* Rest of your CSS remains the same */
-.login-container h2 {
-    font-size: 28px;
+/* Form toggle buttons */
+.form-toggle {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
-    color: #333;
 }
 
-/* Form */
-.login-container form {
+.toggle-button {
+    background: none;
+    border: none;
+    color: #007BFF;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+.toggle-button.active {
+    border-bottom: 2px solid #007BFF;
+    color: #0056b3;
+}
+
+.toggle-button:hover {
+    color: #f2f5f6;
+}
+
+/* Form content */
+.form-content {
     display: flex;
     flex-direction: column;
 }
@@ -101,15 +118,47 @@ body {
     color: #007BFF;
 }
 
+/* Remember Me and Forgot Password Section */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    /* Increased space between forgot password and login button */
+}
+
+/* Forgot Password Text Styled as Hyperlink */
+.forgot-password {
+    background: none;
+    border: none;
+    color: #007BFF;
+    cursor: pointer;
+    font-size: 12px;
+    /* Decreased font size */
+    text-decoration: underline;
+    padding: 0;
+    /* Removed padding to make it look like text */
+    font-family: inherit;
+    /* Inherits the font from the parent */
+    margin-left: 5px;
+    /* Added margin for spacing */
+}
+
+.forgot-password:hover {
+    color: #0056b3;
+    /* Darker blue on hover */
+    text-decoration: none;
+}
+
 /* Error Message */
-.login-container .error {
+.error {
     color: red;
     font-size: 14px;
     margin-bottom: 15px;
 }
 
 /* Button */
-.login-container button {
+button {
     width: 100%;
     padding: 12px;
     font-size: 16px;
@@ -121,25 +170,25 @@ body {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.login-container button:hover {
+button:hover {
     background-color: #0056b3;
     transform: scale(1.05);
 }
 
 /* Mobile Responsive Styles */
 @media (max-width: 600px) {
-    .login-container {
+    .form-container {
         width: 90%;
-        padding: 30px;
+        padding: 20px;
+        margin-top: 50px;
     }
 
-    .login-container h2 {
-        font-size: 24px;
+    .form-toggle {
+        flex-direction: column;
     }
 
-    .input-wrapper input {
-        padding: 12px 12px 12px 45px;
-        /* Increased left padding to accommodate the icon */
+    .login-container input {
+        padding: 10px;
         font-size: 14px;
     }
 
@@ -162,7 +211,21 @@ body {
         /* Adjusted font size for mobile */
     }
 
-    .login-container button {
+    .password-wrapper input {
+        padding-right: 50px;
+    }
+
+    .input-wrapper .icon {
+        left: 15px;
+        font-size: 16px;
+    }
+
+    .password-wrapper .toggle-password {
+        right: 15px;
+        font-size: 16px;
+    }
+
+    button {
         padding: 10px;
         font-size: 14px;
     }
