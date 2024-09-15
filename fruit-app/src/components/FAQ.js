@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './FAQ.css'; // Create this CSS file for styling
 
-const API_URL = 'http://localhost:5000/api/faqs';
+const API_URL = 'https://fruitai-backend-zar4.onrender.com/api/faqs';
 
 const FAQ = () => {
   const [faqs, setFaqs] = useState([]);
