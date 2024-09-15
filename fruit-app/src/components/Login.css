@@ -137,9 +137,29 @@ body {
         font-size: 24px;
     }
 
-    .login-container input {
-        padding: 10px;
+    .input-wrapper input {
+        padding: 12px 12px 12px 45px;
+        /* Increased left padding to accommodate the icon */
         font-size: 14px;
+    }
+
+    .password-wrapper input {
+        padding-right: 50px;
+        /* Increased right padding to accommodate the eye icon */
+    }
+
+    .input-wrapper .icon {
+        left: 15px;
+        /* Adjusted icon position for mobile */
+        font-size: 16px;
+        /* Adjusted font size for mobile */
+    }
+
+    .password-wrapper .toggle-password {
+        right: 15px;
+        /* Adjusted position for mobile */
+        font-size: 16px;
+        /* Adjusted font size for mobile */
     }
 
     .login-container button {
