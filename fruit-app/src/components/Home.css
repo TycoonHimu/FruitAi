@@ -1,0 +1,188 @@
+/* Home.css */
+
+/* Container for the home page */
+.home-container {
+    background: rgba(255, 255, 255, 0.9);
+    /* Semi-transparent white for better contrast */
+    padding: 20px;
+    border-radius: 15px;
+    /* Increased radius for a softer look */
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow for depth */
+    text-align: center;
+    backdrop-filter: blur(10px);
+    /* Blur effect */
+}
+
+/* Heading styling */
+.home-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #2b6ce4;
+    /* Soft blue color */
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    /* Boldens the heading */
+}
+
+/* Grid layout for services */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    /* Adjusted min width for smaller cards */
+    gap: 15px;
+    /* Increased gap for better spacing */
+}
+
+/* Individual service card styling */
+.service-card {
+    background: #28afe5;
+    /* Soft blue background */
+    border-radius: 10px;
+    /* Increased radius for a more modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transitions */
+    position: relative;
+    /* To enable absolute positioning of content */
+    padding-top: 80%;
+    /* Adjusted to create slightly smaller square shape */
+    width: 100%;
+    /* Full width of its container */
+    display: flex;
+    /* Flexbox for centering content */
+    align-items: center;
+    /* Center content vertically */
+    justify-content: center;
+    /* Center content horizontally */
+    text-align: center;
+    /* Center text */
+    overflow: hidden;
+    /* Prevents overflow of content */
+}
+
+/* Service card content */
+.service-card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    display: flex;
+    /* Use flexbox for centering */
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    justify-content: center;
+    /* Center items vertically */
+    transition: transform 0.3s ease;
+    /* Smooth transition for scaling */
+}
+
+.service-icon {
+    font-size: 2.5em;
+    /* Reduced icon size for smaller cards */
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    /* White color for icons */
+}
+
+/* Service card text */
+.service-card p {
+    margin: 0;
+    font-size: 0.9em;
+    /* Smaller text size for better fit */
+    color: #FFFFFF;
+    /* White text color */
+}
+
+/* Hover effect for service card */
+.service-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    /* Slight scaling effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Logout button styling */
+.logout-button {
+    background: #007BFF;
+    /* Changed to a more vibrant blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    /* Added transition for scaling */
+}
+
+.logout-button:hover {
+    background: #0056b3;
+    /* Darker blue on hover */
+    transform: scale(1.05);
+    /* Slight scaling effect */
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .home-container {
+        padding: 15px;
+    }
+
+    .home-container h2 {
+        font-size: 22px;
+    }
+
+    .logout-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        padding: 10px;
+    }
+
+    .home-container h2 {
+        font-size: 20px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        /* Adjust grid columns */
+    }
+
+    .logout-button {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-container {
+        padding: 5px;
+    }
+
+    .home-container h2 {
+        font-size: 18px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        /* Single column layout */
+    }
+
+    .logout-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}

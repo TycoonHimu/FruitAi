@@ -1,0 +1,195 @@
+/* Chatbot.css */
+
+/* Container for the entire chatbot section */
+.chatbot-container {
+    background: rgba(255, 255, 255, 0.9);
+    /* Semi-transparent white for better contrast */
+    padding: 20px;
+    /* Padding around the content */
+    border-radius: 15px;
+    /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    /* Shadow for depth */
+    max-width: 800px;
+    /* Maximum width for better readability */
+    margin: auto;
+    /* Center the container */
+    text-align: center;
+    /* Center text alignment */
+}
+
+/* Fruits grid layout */
+.fruits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* Responsive grid layout */
+    gap: 15px;
+    /* Space between fruit cards */
+    margin-bottom: 20px;
+    /* Space below the grid */
+}
+
+/* Individual fruit card */
+.fruit-card {
+    background: #28afe5;
+    /* Soft blue background */
+    border-radius: 10px;
+    /* Rounded corners for fruit cards */
+    padding: 20px;
+    /* Padding inside the card */
+    cursor: pointer;
+    /* Pointer cursor for interactive elements */
+    transition: transform 0.2s ease;
+    /* Smooth transform effect on hover */
+}
+
+.fruit-card:hover {
+    transform: translateY(-5px);
+    /* Lift effect on hover */
+}
+
+/* Fruit detail section */
+.fruit-detail {
+    margin-bottom: 20px;
+    /* Space below the fruit detail */
+}
+
+/* Chatbot chat section */
+.chatbot-chat-section {
+    border-top: 1px solid #ccc;
+    /* Divider line */
+    padding-top: 20px;
+    /* Padding above chat section */
+    margin-top: 20px;
+    /* Space above the chat section */
+}
+
+/* Chat history */
+.chat-history {
+    max-height: 300px;
+    /* Maximum height for chat history */
+    overflow-y: auto;
+    /* Scrollable if content exceeds max height */
+    border: 1px solid #ccc;
+    /* Border around chat history */
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 10px;
+    /* Padding inside chat history */
+    margin-bottom: 20px;
+    /* Space below chat history */
+    background: #f9f9f9;
+    /* Light background for chat history */
+}
+
+/* Individual chat messages */
+.chat-user {
+    text-align: right;
+    /* Align user messages to the right */
+    margin-bottom: 10px;
+    /* Space between messages */
+}
+
+.chat-bot {
+    text-align: left;
+    /* Align bot messages to the left */
+    margin-bottom: 10px;
+    /* Space between messages */
+}
+
+/* Chat input container */
+.chat-input-container {
+    display: flex;
+    /* Flexbox layout for input and button */
+    justify-content: space-between;
+    /* Space between input and button */
+    align-items: center;
+    /* Center items vertically */
+    margin-top: 10px;
+    /* Space above input container */
+}
+
+/* Chat input field */
+.chat-input-container input {
+    flex: 1;
+    /* Input takes all available space */
+    padding: 10px;
+    /* Padding inside the input */
+    border: 1px solid #ccc;
+    /* Border color */
+    border-radius: 5px;
+    /* Rounded corners */
+    margin-right: 10px;
+    /* Space between input and button */
+    font-size: 16px;
+    /* Font size for input */
+    transition: border 0.3s ease;
+    /* Smooth border transition */
+}
+
+.chat-input-container input:focus {
+    border-color: #007BFF;
+    /* Change border color on focus */
+    outline: none;
+    /* Remove outline */
+}
+
+/* Send button */
+.chat-input-container button {
+    background: #007BFF;
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    border: none;
+    /* No border */
+    border-radius: 5px;
+    /* Rounded corners */
+    padding: 10px 15px;
+    /* Padding inside the button */
+    cursor: pointer;
+    /* Pointer cursor for buttons */
+    transition: background 0.3s ease;
+    /* Smooth background transition */
+    font-size: 16px;
+    /* Font size for button */
+}
+
+.chat-input-container button:hover {
+    background: #0056b3;
+    /* Darker blue on hover */
+}
+
+/* Heading styling */
+.chatbot-container h2 {
+    margin-bottom: 20px;
+    /* Space below the heading */
+    font-size: 24px;
+    /* Font size for heading */
+    color: #2b6ce4;
+    /* Soft blue color */
+}
+
+/* Chat message styles */
+.chat-user,
+.chat-bot {
+    padding: 8px;
+    /* Padding for messages */
+    border-radius: 5px;
+    /* Rounded corners for messages */
+    margin-bottom: 10px;
+    /* Space between messages */
+}
+
+.chat-user {
+    background-color: #d1e7ff;
+    /* Light blue background for user messages */
+    align-self: flex-end;
+    /* Align user messages to the right */
+}
+
+.chat-bot {
+    background-color: #e2e3e5;
+    /* Light gray background for bot messages */
+    align-self: flex-start;
+    /* Align bot messages to the left */
+}
